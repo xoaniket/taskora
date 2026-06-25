@@ -35,7 +35,7 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem("refreshToken");
 
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/token/refresh/",
+          "https://taskora-ajkj.onrender.com/api/token/refresh/",
           {
             refresh: refreshToken,
           },
