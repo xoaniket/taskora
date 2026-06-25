@@ -128,26 +128,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://taskora-xoxo.vercel.app"
+    "http://https://taskora-xoxo.vercel.app/"
 ]
 
-CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-]
-
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS",
-]
-
-CORS_ALLOW_ALL_ORIGINS = True
 # JWT token sent -> Django verifies token -> User authenticated
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
