@@ -1,7 +1,7 @@
 import axios from "axios"; //custom Axios instance so you don't have to write the full backend URL every time
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api", // start with this URL whenever u make request
+  baseURL: "https://taskora-ajkj.onrender.com/api/", // start with this URL whenever u make request
 });
 
 //Request interceptor
