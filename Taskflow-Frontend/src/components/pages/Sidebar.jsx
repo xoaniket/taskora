@@ -1,5 +1,6 @@
 import { SiTask } from "react-icons/si";
 import { NavLink, useNavigate } from "react-router-dom";
+import BlurText from "../motion/BlurText";
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -10,11 +11,19 @@ export default function Layout() {
 
     navigate("/");
   };
+
   return (
-    <aside className="hidden md:flex w-64 bg-violet-600  flex-col min-h-screen fixed top-0 left-0 ">
-      <h1 className="flex items-center gap-2 text-3xl font-bold text-white p-6">
-        TASKORA <SiTask />
-      </h1>
+    <aside className="hidden md:flex w-64  bg-violet-600  flex-col min-h-screen fixed top-0 left-0 ">
+      <div className=" mt-4 flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
+        <BlurText
+          text="TASKORA"
+          delay={200}
+          animateBy="letter"
+          direction="top"
+          className="  text-2xl text-white  "
+        />
+        <SiTask className="text-2xl text-white" />
+      </div>
       <nav className="flex flex-col px-6 gap-4 text-white ">
         <NavLink
           to="/dashboard"

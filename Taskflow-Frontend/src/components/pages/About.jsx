@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiNamecheap, SiTask } from "react-icons/si";
+import BlurText from "../motion/BlurText";
 
 export default function About() {
   const navigate = useNavigate();
@@ -16,9 +17,16 @@ export default function About() {
   return (
     <main className="min-h-screen  flex flex-col bg-violet-50">
       <header className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap  justify-between items-center">
-        <h1 className="flex items-center gap-2 tracking-tighter font-bold text-2xl mb-4">
-          TASKORA <SiTask className="" />
-        </h1>
+        <div className=" mt-4 flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
+          <BlurText
+            text="TASKORA"
+            delay={200}
+            animateBy="letter"
+            direction="top"
+            className="  text-2xl text-white  "
+          />
+          <SiTask className="text-2xl text-white" />
+        </div>
 
         <nav className="flex  gap-4">
           <NavLink

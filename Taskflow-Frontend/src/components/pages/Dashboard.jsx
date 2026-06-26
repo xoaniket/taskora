@@ -5,6 +5,7 @@ import { FaEdit, FaTasks } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 import { NavLink, useNavigate } from "react-router-dom";
 import { SiTask } from "react-icons/si";
+import BlurText from "../motion/BlurText";
 
 export default function Dashboard() {
   const [profile, setProfile] = React.useState(null);
@@ -190,9 +191,16 @@ export default function Dashboard() {
   return (
     <main className="min-h-screen bg-violet-50 ">
       <header className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap justify-between items-center">
-        <h1 className="flex items-center gap-2 tracking-tighter font-bold text-2xl mb-4">
-          TASKORA <SiTask className="" />
-        </h1>
+        <div className="flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
+          <BlurText
+            text="TASKORA"
+            delay={200}
+            animateBy="letter"
+            direction="top"
+            className="  text-2xl  "
+          />
+          <SiTask className="text-2xl text-white" />
+        </div>
         <nav className="flex  gap-4">
           <NavLink
             to="/dashboard"
