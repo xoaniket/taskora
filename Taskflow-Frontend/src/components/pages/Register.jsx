@@ -4,6 +4,8 @@ import api from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaUserCircle } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import BlurText from "../motion/BlurText";
+import { SiTask } from "react-icons/si";
 
 export default function Register() {
   const [username, setUsername] = React.useState("");
@@ -50,26 +52,46 @@ export default function Register() {
   return (
     <main
       className="min-h-screen grid lg:grid-cols-2 overflow-hidden
-     bg-gradient-to-br from-violet-600 via-purple-500 to-fuchsia-500"
+     bg-linear-to-br from-violet-600 via-purple-500 to-fuchsia-500"
     >
       <section
         className=" lg:flex flex-col items-center justify-center
        "
       >
-        <h1 className="text-center text-5xl font-bold mb-6 text-amber-200">
-          Taskora
-        </h1>
-        <h2 className=" text-center text-3xl font-semibold mb-4">
-          Organized. Track. Deliver.
-        </h2>
-        <p className="text-center text-lg  text-white/40">
-          Manage tasks, collaborate with your team, and stay productive with one
-          powerful workspace.
-        </p>
+        <div className="pt-6 md:pt-3 ">
+          <div className="flex items-center justify-center gap-2">
+            <BlurText
+              text="TASKORA"
+              delay={120}
+              animateBy="letter"
+              direction="top"
+              className=" text-white  text-4xl font-bold   "
+            />
+            <SiTask className="text-2xl text-white" />
+          </div>
+          <div className=" flex justify-center text-3xl font-semibold mb-4">
+            <BlurText
+              text="Organized. Track. Deliver."
+              delay={180}
+              animateBy="words"
+              direction="top"
+              className=" text-white  text-4xl font-bold   "
+            />
+          </div>
+          <div className="flex justify-center text-lg  text-white/40">
+            <BlurText
+              text="Manage tasks, collaborate with your team, and stay productive with one powerful workspace."
+              delay={200}
+              animateBy="word"
+              direction="left"
+              className="text-center text-lg text-white/40 max-w-md mt-4 leading-7 "
+            />
+          </div>
+        </div>
       </section>
 
       <section className=" flex  items-center justify-center  rounded-t-3xl lg:rounded-t-none">
-        <div className="my-1 w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-10 shadow-2xl ">
+        <div className="tracking-tighter my-1 w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 shadow-2xl ">
           <p className="text-2xl text-white/90 text-center font-semibold tracking-tighter">
             Sign Up
           </p>
@@ -78,18 +100,18 @@ export default function Register() {
           </p>
 
           <form className="" onSubmit={handleSubmit}>
-            <label className="text-sm text-white/70">Username</label>
-            <div>
+            <label className=" text-sm text-white/70">Username</label>
+            <div className="relative mt-1 flex items-center">
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
-                className="w-full rounded-xl p-3 mb-4 bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
+                className="w-full rounded-xl p-3  bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
               />
               <button
                 type="text"
-                className=" absolute p-4 translate-y-0.5 left-90 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
+                className=" absolute p-4 right-0 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
               >
                 <FaUserCircle />
               </button>
@@ -97,54 +119,54 @@ export default function Register() {
 
             <label className="text-sm text-white/70">Email</label>
 
-            <div>
+            <div className="relative mt-1 flex items-center">
               <input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl p-3 mb-4 bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
+                className="w-full rounded-xl p-3  bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
               />
 
               <button
                 type="text"
-                className=" absolute p-4 translate-y-0.5 left-90 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
+                className=" absolute p-4 right-0 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
               >
                 <MdEmail />
               </button>
             </div>
 
             <label className="text-sm text-white/70">Password</label>
-            <div className="">
+            <div className="relative mt-1 flex items-center">
               <input
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(p) => setPassword(p.target.value)}
                 placeholder="Password"
-                className="w-full rounded-xl p-3 mb-4 bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
+                className="w-full rounded-xl p-3  bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
-                className=" absolute p-4 translate-y-0.5 left-90 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
+                className=" absolute p-4 right-0 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
 
             <label className="text-sm text-white/70">Confirm Password</label>
-            <div className="">
+            <div className="relative mt-1 flex items-center">
               <input
                 type={showPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(p) => setConfirmPassword(p.target.value)}
                 placeholder="Password"
-                className="w-full rounded-xl p-3 mb-4 bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
+                className="w-full rounded-xl p-3 bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
-                className=" absolute p-4 translate-y-0.5 left-90 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
+                className=" absolute p-4 right-0 text-white/60 hover:text-white transition text-sm bg-violet-600 rounded-l-none rounded-xl"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
@@ -153,7 +175,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl p-3 bg-violet-500 text-white font-medium flex justify-center items-center gap-3 hover:bg-violet-600 active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full rounded-xl mt-6 p-3 bg-violet-500 text-white font-medium flex justify-center items-center gap-3 hover:bg-violet-600 active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading ? "Signing Up..." : "Sign Up"}
               {loading && (
