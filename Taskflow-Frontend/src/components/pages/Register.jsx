@@ -55,10 +55,11 @@ export default function Register() {
      bg-linear-to-br from-violet-600 via-purple-500 to-fuchsia-500"
     >
       <section
+        data-aos="fade-right"
         className=" lg:flex flex-col items-center justify-center
        "
       >
-        <div className="pt-6 md:pt-3 ">
+        <div className="p-8 md:p-3 ">
           <div className="flex items-center justify-center gap-2">
             <BlurText
               text="TASKORA"
@@ -90,7 +91,10 @@ export default function Register() {
         </div>
       </section>
 
-      <section className=" flex  items-center justify-center  rounded-t-3xl lg:rounded-t-none">
+      <section
+        data-aos="fade-left"
+        className=" flex  items-center justify-center  rounded-t-3xl lg:rounded-t-none"
+      >
         <div className="tracking-tighter my-1 w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 shadow-2xl ">
           <p className="text-2xl text-white/90 text-center font-semibold tracking-tighter">
             Sign Up

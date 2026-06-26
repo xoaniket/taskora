@@ -60,7 +60,11 @@ export default function Profile() {
   }, []);
   return (
     <main className="min-h-screen flex flex-col bg-violet-50 ">
-      <header className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap  justify-between items-center">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="700"
+        className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap  justify-between items-center"
+      >
         <div className="  flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
           <BlurText
             text="TASKORA"
@@ -115,7 +119,11 @@ export default function Profile() {
 
       <div className="md:flex md:flex-col flex-1">
         <section className="p-4 flex-1 flex flex-col md:ml-64">
-          <div className="flex  bg-linear-to-r from-violet-500 to-purple-600 text-white shadow mb-9 p-8 rounded-xl justify-between ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="800"
+            className="flex  bg-linear-to-r from-violet-500 to-purple-600 text-white shadow mb-9 p-8 rounded-xl justify-between "
+          >
             <div className="w-24 h-24 rounded-full bg-white text-violet-400 flex items-center justify-center text-4xl font-bold">
               {username?.charAt(0).toUpperCase()}
             </div>
@@ -135,21 +143,40 @@ export default function Profile() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-2 mb-6">
-            <div className="p-5 bg-linear-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              className="p-5 bg-linear-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow"
+            >
               <p>Total Task</p>
               <h2 className="text-3xl font-bold">{totalTasks}</h2>
             </div>
-            <div className="p-5 bg-linear-to-br from-green-500 to-emerald-700 text-white  rounded-xl shadow">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="700"
+              className="p-5 bg-linear-to-br from-green-500 to-emerald-700 text-white  rounded-xl shadow"
+            >
               <p>Completed Tasks</p>
               <h2 className="text-3xl font-bold">{completedTasks}</h2>
             </div>
-            <div className="p-5 border border-orange-200 bg-linear-to-br from-orange-500 to-amber-700 text-white rounded-xl shadow">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="700"
+              className="p-5 border border-orange-200 bg-linear-to-br from-orange-500 to-amber-700 text-white rounded-xl shadow"
+            >
               <p>Pending Tasks</p>
               <h1 className="text-3xl font-bold">{pendingTasks}</h1>
             </div>
           </div>
 
-          <div className=" hidden md:flex md:flex-col bg-linear-to-br from-violet-600 via-indigo-600 to-blue-600 rounded-2xl p-6 text-white shadow-xl">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            className="  bg-linear-to-br from-violet-600 via-indigo-600 to-blue-600 rounded-2xl p-6 text-white shadow-xl"
+          >
             <p className="text-violet-200 text-sm uppercase tracking-wider mb-2">
               Daily Motivation
             </p>

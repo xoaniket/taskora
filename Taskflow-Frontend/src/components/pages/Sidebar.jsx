@@ -13,7 +13,11 @@ export default function Layout() {
   };
 
   return (
-    <aside className="hidden md:flex w-64  bg-violet-600  flex-col min-h-screen fixed top-0 left-0 ">
+    <aside
+      data-aos="fade-right"
+      data-aos-duration="700"
+      className="hidden md:flex w-64  bg-violet-600  flex-col min-h-screen fixed top-0 left-0 "
+    >
       <div className=" mt-4 flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
         <BlurText
           text="TASKORA"

@@ -16,7 +16,11 @@ export default function About() {
   };
   return (
     <main className="min-h-screen  flex flex-col bg-violet-50">
-      <header className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap  justify-between items-center">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="700"
+        className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap  justify-between items-center"
+      >
         <div className=" mt-4 flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
           <BlurText
             text="TASKORA"
@@ -70,7 +74,12 @@ export default function About() {
       <Sidebar />
 
       <section className="md:ml-64 p-6 md:p-8 space-y-6">
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-duration="800"
+          className="bg-white p-6 rounded-xl shadow"
+        >
           <h1 className=" flex items-center gap-2 text-4xl font-bold mb-3 text-violet-600">
             About Taskora <SiTask />
           </h1>
@@ -108,7 +117,12 @@ export default function About() {
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-duration="800"
+          className="bg-white p-6 rounded-xl shadow"
+        >
           <h2 className="text-2xl font-bold mb-4 text-violet-600">
             Concepts Used
           </h2>
@@ -128,7 +142,11 @@ export default function About() {
         </div>
       </section>
 
-      <footer className="mt-auto text-center text-black bg-violet-400 border-t text-sm p-4 md:ml-64">
+      <footer
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="mt-auto text-center text-black bg-violet-400 border-t text-sm p-4 md:ml-64"
+      >
         <p>Taskora v1.0</p>
         <p>Stay Organized 🚀</p>
       </footer>

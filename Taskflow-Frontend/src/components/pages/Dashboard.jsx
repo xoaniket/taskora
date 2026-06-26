@@ -67,6 +67,8 @@ export default function Dashboard() {
   //ALL TASKS RENDER ON SCREEN.............................................................................
   const alltasks = filteredTask.map((task) => (
     <div
+      data-aos="fade-up"
+      data-aos-delay="200"
       key={task.id}
       className={`bg-white mb-4 rounded-xl p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border-l-4 ${
         task.completed ? "border-green-500" : "border-yellow-500"
@@ -190,7 +192,11 @@ export default function Dashboard() {
 
   return (
     <main className="min-h-screen bg-violet-50 ">
-      <header className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap justify-between items-center">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="600"
+        className="md:hidden bg-violet-600 text-white p-4 flex flex-wrap justify-between items-center"
+      >
         <div className="flex items-center justify-center gap-2 tracking-tighter font-bold text-2xl mb-4">
           <BlurText
             text="TASKORA"
@@ -246,7 +252,11 @@ export default function Dashboard() {
 
       {/* WELCOME MESSAGE................................................................................... */}
       <section className=" flex-1  p-4 md:p-8 md:ml-64 ">
-        <div className="bg-linear-to-r from-violet-500 to-purple-600 text-white p-6 rounded-xl mb-6">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="700"
+          className="bg-linear-to-r from-violet-500 to-purple-600 text-white p-6 rounded-xl mb-6"
+        >
           <h1 className="text-3xl font-bold">
             Welcome back, {profile?.username}
           </h1>
@@ -255,19 +265,35 @@ export default function Dashboard() {
 
         {/* TASK TRACKER.................................................................... */}
         <div className="grid md:grid-cols-3 gap-3 mb-8">
-          <div className="p-5 bg-linear-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="p-5 bg-linear-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow"
+          >
             <p>Total Task</p>
             <h2 className="text-3xl font-bold">{totalTasks}</h2>
           </div>
-          <div className="p-5 bg-linear-to-br from-green-500 to-emerald-700 text-white  rounded-xl shadow">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="p-5 bg-linear-to-br from-green-500 to-emerald-700 text-white  rounded-xl shadow"
+          >
             <p>Completed Tasks</p>
             <h2 className="text-3xl font-bold">{completedTasks}</h2>
           </div>
-          <div className="p-5 border border-orange-200 bg-linear-to-br from-orange-500 to-amber-700 text-white rounded-xl shadow">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="p-5 border border-orange-200 bg-linear-to-br from-orange-500 to-amber-700 text-white rounded-xl shadow"
+          >
             <p>Pending Tasks</p>
             <h1 className="text-3xl font-bold">{pendingTasks}</h1>
           </div>
-          <div className="bg-gray-200 h-3 md:col-span-3  rounded-full">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="350"
+            className="bg-gray-200 h-3 md:col-span-3  rounded-full"
+          >
             <div
               className="bg-green-500 h-3 rounded-full"
               style={{ width: `${progress}%` }}
@@ -277,6 +303,8 @@ export default function Dashboard() {
 
         {/* CREATE NEW TASKS.................................................................................. */}
         <div
+          data-aos="fade-up"
+          data-aos-duration="800"
           ref={editRef}
           className="mx-auto bg-white shadow rounded-lg p-6 mb-10 "
         >
@@ -337,7 +365,11 @@ export default function Dashboard() {
         </div>
 
         {totalTasks > 0 && (
-          <div className="mb-6 bg-white">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="150"
+            className="mb-6 bg-white"
+          >
             <input
               type="input"
               value={search}
@@ -350,18 +382,25 @@ export default function Dashboard() {
 
         <div className="grid md:grid-cols-2 space-x-2">{alltasks}</div>
         {tasks.length === 0 ? (
-          <div className="p-8 shadow rounded-xl text-center">
+          <div data-aos="zoom-in" className="p-8 shadow rounded-xl text-center">
             NO tasks yet. Create your first task!
           </div>
         ) : (
           filteredTask.length === 0 && (
-            <div className="bg-white p-6 rounded-lg text-center shadow">
+            <div
+              data-aos="zoom-in"
+              className="bg-white p-6 rounded-lg text-center shadow"
+            >
               No matching tasks found.
             </div>
           )
         )}
       </section>
-      <footer className=" mt-auto text-center text-black bg-violet-400 text-sm p-4 md:ml-64  ">
+      <footer
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className=" mt-auto text-center text-black bg-violet-400 text-sm p-4 md:ml-64  "
+      >
         <p>Taskora v1.0</p>
         <p>Organize • Track • Achieve 🚀</p>
       </footer>
